@@ -1,24 +1,26 @@
 package FirstPalindrome;
-//this option is faster than FirstPalindrome2
 public class FirstPalindrome {
     public String findFirstPalindrome(String[] words) {
-        String checkedWord = "";
         for(String word : words) {
             if(isPalindrome(word)) {
-                checkedWord = word;
-                break;
+                return word;
             }
         }
-        return checkedWord;
+        return "";
     }
-
-    private boolean isPalindrome(String word) {
-        for(int i = 0; i < word.length()/2; i++) {
-            if(word.charAt(i) != word.charAt(word.length()-1-i))
+    //this method is faster and better than isPalindrome2()
+    private static boolean isPalindrome(String s) {
+        for(int i = 0; i < s.length()/2; i++) {
+            if(s.charAt(i) != s.charAt(s.length()-1-i))
                 return false;
         }
         return true;
     }
-
+    //this method spends more time and memory than isPalindrome()
+    private static boolean isPalindrome2(String s) {
+        StringBuilder sb = new StringBuilder(s);
+        String reverse = sb.reverse().toString();
+        return s.equals(reverse);
+    }
 
 }
