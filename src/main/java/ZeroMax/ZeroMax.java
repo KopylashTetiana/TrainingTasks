@@ -1,3 +1,5 @@
+package ZeroMax;
+
 import org.jetbrains.annotations.NotNull;
 
 import static java.lang.Math.max;

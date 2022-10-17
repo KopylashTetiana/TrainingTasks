@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import ZeroMax.ZeroMax;
 
 import static org.junit.Assert.*;
 
