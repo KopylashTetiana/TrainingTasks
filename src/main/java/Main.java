@@ -20,10 +20,14 @@ public class Main {
         System.out.println(Arrays.toString(nums));
         //Task Sorting: BubleSort
         Sorting s = new Sorting();
-        int [] array = {3, 9 , 5, 7, 6, 4, 8, 2, 1};
+        int [] array = {3, 9, 5, 7, 6, 4, 8, 2, 1};
+        System.out.println(Arrays.toString(array));
         //s.bubbleSort(array);
         //s.selectionSort(array);
-        s.insertionSort(array);
+        s.insertS(array);
+        //s.insertSort(array);
+
         System.out.println(Arrays.toString(array));
+        //System.out.println(s.evenSelect(array));
     }
 }

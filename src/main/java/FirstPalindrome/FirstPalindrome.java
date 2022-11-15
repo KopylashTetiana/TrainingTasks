@@ -16,7 +16,7 @@ public class FirstPalindrome {
         }
         return true;
     }
-    //this method spends more time and memory than isPalindrome()
+    //the method below spends more time and memory than isPalindrome()
     private static boolean isPalindrome2(String s) {
         StringBuilder sb = new StringBuilder(s);
         String reverse = sb.reverse().toString();

@@ -7,16 +7,20 @@ import static java.lang.Math.max;
 public class ZeroMax {
 
     //this method is faster than zeroMax2()
-    public int[] zeroMax(int @NotNull [] nums) {
-        int maxOdd = Integer.MIN_VALUE;
-        boolean wasOdd = false;
-        for (int i = nums.length - 1; i >= 0; i--) {
-            if((nums[i] % 2) !=0) {
-                maxOdd = max(nums[i], maxOdd);
-                wasOdd = true;
-            }
-            if(nums[i] == 0 && wasOdd) {
-                nums[i] = maxOdd;
+    public int[] zeroMax(int [] nums) {
+        if (nums == null) {
+            System.out.println("The input array is null, nullable array cannot be processd.");
+        } else {
+            int maxOdd = Integer.MIN_VALUE;
+            boolean wasOdd = false;
+            for (int i = nums.length - 1; i >= 0; i--) {
+                if ((nums[i] % 2) != 0) {
+                    maxOdd = max(nums[i], maxOdd);
+                    wasOdd = true;
+                }
+                if (nums[i] == 0 && wasOdd) {
+                    nums[i] = maxOdd;
+                }
             }
         }
         return nums;
